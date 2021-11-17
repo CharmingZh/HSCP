@@ -1,0 +1,10 @@
+X=xlsread('sample.xlsx');
+W=xlsread('w.xlsx');
+S=std(X);
+[m,n] = findpeaks(S);
+rmean=mean(m);
+[pks,locs] = findpeaks(S,'minpeakheight',rmean);
+B=X(:,locs);
+WS=W(:,locs);
+train=B(1:268,:);
+test=B(269:400,:);
