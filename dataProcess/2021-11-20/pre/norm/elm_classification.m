@@ -3,10 +3,10 @@ MTesting=[];
 f=1;
 for z=1:50
     disp(['This is ', num2str(z), 'round'])
-Wtrain=xlsread('Ntrain.xlsx');
+Wtrain=xlsread('top/Wtrain.xlsx');
 T=Wtrain(:,1)';
 P=Wtrain(:,2:size(Wtrain,2))'; 
-Wtest=xlsread('Ntest.xlsx');
+Wtest=xlsread('top/Wtest.xlsx');
 TV.T=Wtest(:,1)';
 TV.P=Wtest(:,2:size(Wtest,2))';
 
